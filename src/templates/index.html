@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Impact Analyzer</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Product Impact Analyzer</h1>
+        <form id="impactForm">
+            <div class="form-group">
+                <label for="initiative_name">Nombre de la Iniciativa:</label>
+                <input type="text" id="initiative_name" name="initiative_name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="initial_investment">Inversión Inicial ($):</label>
+                <input type="number" id="initial_investment" name="initial_investment" step="0.01" min="0.01" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="business_objective">Objetivo de Negocio:</label>
+                <select id="business_objective" name="business_objective" required>
+                    <option value="">Seleccione un objetivo</option>
+                    <option value="revenue_growth">Crecimiento de Ingresos</option>
+                    <option value="cost_reduction">Reducción de Costos</option>
+                    <option value="customer_satisfaction">Satisfacción del Cliente</option>
+                    <option value="operational_efficiency">Eficiencia Operacional</option>
+                    <option value="market_expansion">Expansión de Mercado</option>
+                    <option value="innovation">Innovación</option>
+                    <option value="risk_mitigation">Mitigación de Riesgos</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="expected_impact">Impacto Esperado (0-10):</label>
+                <input type="number" id="expected_impact" name="expected_impact" step="0.1" min="0" max="10" required>
+            </div>
+            
+            <button type="submit" id="submitBtn">Analizar Impacto</button>
+        </form>
+        
+        <textarea id="result" placeholder="Resultado aparecerá aquí..."></textarea>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html> 

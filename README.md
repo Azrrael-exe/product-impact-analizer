@@ -1,0 +1,1 @@
+# product-impact-analizer
